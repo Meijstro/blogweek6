@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome Thijs
+                    Hallo Sjoerd
                 </div>
 
                 <div class="links">

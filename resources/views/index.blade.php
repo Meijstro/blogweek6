@@ -13,6 +13,7 @@
 
   @foreach ($articles as $article)
     <h3>{{ $article->title }}</h3>
+    <p>{{ $article->created_at }}</p>
     <p>{{ $article->body }}</p>
     <p>{{ $article->category }}</p>
     <hr>

@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    $articles = DB::table('articles')->get();
+Route::get('/', 'ArticlesController@index');
+
+Route::get('create', 'ArticlesController@create');
+
+Route::post('article', 'ArticlesController@store');
 
 
-    return view('create', compact('articles'));
-    
-});
 
-//Route::post('create', function () {
-//    return view('create');
-//});
+// Route::post('create', function () {
+//     return view('index');
+// });

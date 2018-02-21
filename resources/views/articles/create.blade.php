@@ -2,13 +2,8 @@
 
 @section('content')
 
-@foreach ($articles as $article)
-	<p>{{ $article->title }}</p>
-	<p>{{ $article->body }}</p>
-@endforeach
-
 	<h1>Add Article</h1>
-		<form action="" method="post">
+		<form action="article" method="post">
 			<input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
 			<div>
 					<label for="name">Title:</label>

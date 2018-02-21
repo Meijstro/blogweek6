@@ -24,6 +24,7 @@ class ArticlesController extends Controller
         $article = new Article;
         $article->title = $request->title;
         $article->body = $request->body;
+        $article->category = $request->category;
 
         $article->save();
 

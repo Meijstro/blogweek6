@@ -13,6 +13,12 @@
 
 Route::get('/', 'ArticlesController@index');
 
+Route::get('fcgroningen', 'ArticlesController@fcgroningen');
+
+Route::get('cryptovaluta', 'ArticlesController@cryptovaluta');
+
+Route::get('trump', 'ArticlesController@trump');
+
 Route::get('create', 'ArticlesController@create');
 
 Route::post('article', 'ArticlesController@store');

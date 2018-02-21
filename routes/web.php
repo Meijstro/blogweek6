@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $articles = DB::table('articles')->get();
+
+
+    return view('create', compact('articles'));
+    
 });
+
+//Route::post('create', function () {
+//    return view('create');
+//});

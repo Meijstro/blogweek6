@@ -2,7 +2,7 @@
 
 @section('content')
 <label for="name">Filter on category:</label> <br><br>
-
+  <a href="/">All</a>
   <a href="fcgroningen">FC Groningen</a>
   <a href="cryptovaluta">Cryptovaluta</a>
   <a href="trump">Trump</a>

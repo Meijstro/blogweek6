@@ -13,6 +13,21 @@ class ArticlesController extends Controller
         $articles = Article::orderBy('id', 'desc')->get()->take(1);
         return view('index', compact('articles'));
     }
+    public function fcgroningen()
+    {
+        $articles = Article::orderBy('id', 'desc')->where('category','fcgroningen')->get();
+        return view('index', compact('articles'));
+    }
+    public function cryptovaluta()
+    {
+        $articles = Article::orderBy('id', 'desc')->where('category','cryptovaluta')->get();
+        return view('index', compact('articles'));
+    }
+    public function trump()
+    {
+        $articles = Article::orderBy('id', 'desc')->where('category','trump')->get();
+        return view('index', compact('articles'));
+    }
 
     public function create()
     {
@@ -24,6 +39,8 @@ class ArticlesController extends Controller
         $article = new Article;
         $article->title = $request->title;
         $article->body = $request->body;
+        $article->category = $request->category;
+        $article->created_at = $request->created_at;
 
         $article->save();
 

@@ -3,7 +3,7 @@
 @section('content')
 
 	<h1>Add Article</h1>
-		<form action="/article" method="post">
+		<form action="article" method="post">
 			<input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
 
 			<div>

@@ -17,7 +17,7 @@ Route::get('create', 'ArticlesController@create');
 
 Route::post('article', 'ArticlesController@store');
 
-
+Route::get('article/{id}', 'ArticlesController@show');
 
 // Route::post('create', function () {
 //     return view('index');

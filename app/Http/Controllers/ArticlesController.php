@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Article;
+use App\Article;
 
 class ArticlesController extends Controller
 {
 
     public function index()
     {
-        $articles = Article::orderBy('id', 'desc')->get();
+        $articles = Article::orderBy('id', 'desc')->get()->take(1);
         return view('index', compact('articles'));
     }
 
@@ -30,4 +30,9 @@ class ArticlesController extends Controller
         return redirect("/");
     }
 
+    public function show($id)
+    {
+      $post = Article::find($id);
+      return view('articles.show', compact('post'));
+    }
 }

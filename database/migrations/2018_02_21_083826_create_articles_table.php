@@ -18,7 +18,6 @@ class CreateArticlesTable extends Migration
             $table->text('title');
             $table->text('body');
             $table->timestamps();
-            $table->text('category');
         });
     }
 

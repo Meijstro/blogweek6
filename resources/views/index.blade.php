@@ -2,7 +2,8 @@
 
 @section('content')
 
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+<main role="main" class="container">
+  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
   @foreach ($article as $article)
   <div class="col-md-6 px-0">
     <h1 class="display-4 font-italic">{{ $article->title }}</h1>
@@ -11,7 +12,7 @@
   @endforeach
 </div>
 
-<main role="main" class="container">
+
 <div class="row">
 @include('layouts.categories')
   <div class="col-md-8 blog-main">

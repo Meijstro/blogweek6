@@ -19,7 +19,7 @@
 					<input type="text" id="title" name="title">
 			</div>
 			<div>
-					<label for="name">Body:</label>
+					<label for="name">Blog:</label>
 					<input type="textarea" id="body" name="body">
 			</div>
 			<div class="button">

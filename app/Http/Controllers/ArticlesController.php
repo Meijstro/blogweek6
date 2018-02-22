@@ -10,23 +10,31 @@ class ArticlesController extends Controller
 
     public function index()
     {
-        $articles = Article::orderBy('id', 'desc')->get()->take(1);
-        return view('index', compact('articles'));
+        $article = Article::orderBy('id', 'desc')->get()->take(1);
+        $articles = Article::orderBy('id', 'desc')->get();
+
+        return view('index', compact('articles', 'article'));
     }
+
     public function fcgroningen()
     {
-        $articles = Article::orderBy('id', 'desc')->where('category','fcgroningen')->get();
-        return view('index', compact('articles'));
+        $article = Article::orderBy('id', 'desc')->where('category','fcgroningen')->get()->take(1);
+        $articles = Article::orderBy('id', 'desc')->where('category','fcgroningen')->get()->forget(0);
+        return view('index', compact('articles', 'article'));
     }
+
     public function cryptovaluta()
     {
-        $articles = Article::orderBy('id', 'desc')->where('category','cryptovaluta')->get();
-        return view('index', compact('articles'));
+      $article = Article::orderBy('id', 'desc')->where('category','cryptovaluta')->get()->take(1);
+      $articles = Article::orderBy('id', 'desc')->where('category','cryptovaluta')->get()->forget(0);
+      return view('index', compact('articles', 'article'));
     }
+
     public function trump()
     {
-        $articles = Article::orderBy('id', 'desc')->where('category','trump')->get();
-        return view('index', compact('articles'));
+      $article = Article::orderBy('id', 'desc')->where('category','trump')->get()->take(1);
+      $articles = Article::orderBy('id', 'desc')->where('category','trump')->get()->forget(0);
+      return view('index', compact('articles', 'article'));
     }
 
     public function create()

@@ -28,3 +28,7 @@ Route::get('article/{id}', 'ArticlesController@show');
 // Route::post('create', function () {
 //     return view('index');
 // });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

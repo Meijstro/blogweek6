@@ -14,7 +14,21 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in! <br> <br>
+
+                    <a class="text-muted" href="/">Go to blog</a>
+
+                    <br> <br>
+
+                    <div>
+                        <a href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">or Logout
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

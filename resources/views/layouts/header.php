@@ -4,9 +4,9 @@
       <a class="text-muted" href="/">Home</a> || <a href="create"> Add Article</a> || <a href="login"> Login</a> || <a href="login"> Logout</a>
     </div>
     <div class="col-4 text-center">
-      <h1>Sjoerd's Blog</h1>
+      <h1>Sjoerd's blog</h1>
 
-      
+
     </div>
   </div>
 

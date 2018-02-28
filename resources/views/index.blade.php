@@ -7,6 +7,7 @@
   @foreach ($article as $article)
   <div class="col-md-6 px-0">
     <h1 class="display-4 font-italic">{{ $article->title }}</h1>
+    <p>Published by {{ $article->blogger }} on {{ $article->updated_at }}</p>
     <p class="lead my-3">{{ $article->body }}</p>
   </div>
   @endforeach
@@ -22,7 +23,7 @@
       @foreach ($articles as $article)
 
         <h2 class="blog-post-title">{{ $article->title }}</h2>
-        <p class="blog-post-meta">Published by {{ $article->blogger }} on date {{ $article->updated_at }} in category {{ $article->category }}</p>
+        <p class="blog-post-meta">Published by {{ $article->blogger }} on {{ $article->updated_at }} in category {{ $article->category }}</p>
         <p>{{ $article->body }}</p>
         <hr>
 

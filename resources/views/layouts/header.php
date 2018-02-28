@@ -5,6 +5,8 @@
     </div>
     <div class="col-4 text-center">
       <h1>Sjoerd's Blog</h1>
+
+      
     </div>
   </div>
 

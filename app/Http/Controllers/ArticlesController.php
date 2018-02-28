@@ -45,6 +45,7 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
         $article = new Article;
+        $article->blogger = $request->blogger;
         $article->title = $request->title;
         $article->body = $request->body;
         $article->category = $request->category;

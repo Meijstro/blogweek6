@@ -16,14 +16,16 @@
 
                     You are logged in! <br> <br>
 
-                    <a class="text-muted" href="/">Go to blog</a>
+                    Welcome {{ Auth::user()->name }} <br> <br>
+
+                    <a class="text-muted" href="/">--> Go to blog</a>
 
                     <br> <br>
 
                     <div>
                         <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">or Logout
+                                         document.getElementById('logout-form').submit();">--> or Logout
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

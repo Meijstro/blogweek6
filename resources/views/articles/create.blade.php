@@ -5,7 +5,7 @@
 	<h1>Add Article</h1>
 		<form action="/article" method="post">
 			<input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
-
+			<input type="hidden" name="blogger" value="{{ Auth::user()->name }}">
 			<div>
 				<label for="name">Category:</label>
 				<select class="dropdown" name="category" onchange="">

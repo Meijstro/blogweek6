@@ -22,7 +22,7 @@
       @foreach ($articles as $article)
 
         <h2 class="blog-post-title">{{ $article->title }}</h2>
-        <p class="blog-post-meta">Published {{ $article->updated_at }} in category {{ $article->category }}</p>
+        <p class="blog-post-meta">Published by {{ $article->blogger }} on date {{ $article->updated_at }} in category {{ $article->category }}</p>
         <p>{{ $article->body }}</p>
         <hr>
 
